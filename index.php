@@ -18,13 +18,17 @@ class Media {
   public image_name;
   public title_image;
 
+  public function __construct(string $_image_name, string $_title_image){
+    $this->image_name=$_image_name;
+    $this->title_image=$_title_image;
+  }
 }
 
 $movies=[
-  new Movie ('Una settimana da Dio', 'acqua.jpg', 8, ['commedia', 'teatro']),
-  new Movie ('Una semana como Dios', 'cover.jpg', 7, ['commedia', 'musical']),
-  new Movie ('Like a Boss', 'love.webp', 10, ['commedia', 'sonetto']),
-  new Movie ('Funken Odin', 'world.webp', 5, ['commedia', 'thriller'])
+  new Movie ('Una settimana da Dio', new Media('acqua.jpg', 'Una settimana da Dio'), 8, ['commedia', 'teatro']),
+  new Movie ('Una semana como Dios', new Media('cover.jpg', 'Una settimana da Dio'), 7, ['commedia', 'musical']),
+  new Movie ('Like a Boss', new Media('love.webp', 'Una settimana da Dio'), 10, ['commedia', 'sonetto']),
+  new Movie ('Funken Odin', new Media('world.webp', 'Una settimana da Dio'), 5, ['commedia', 'thriller'])
   ]
 ?>
 
