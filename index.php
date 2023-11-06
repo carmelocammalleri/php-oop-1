@@ -14,10 +14,10 @@ class Movie {
 }
 
 $movies=[
-  new Movie ('Una settimana da Dio', 'pappagallo.jpg', 8, ['commedia']),
-  new Movie ('Una semana como Dios', 'pappagallo.jpg', 8, ['commedia']),
-  new Movie ('Like Boss', 'pappagallo.jpg', 8, ['commedia']),
-  new Movie ('Funken Odin', 'pappagallo.jpg', 8, ['commedia'])
+  new Movie ('Una settimana da Dio', 'acqua.jpg', 8, ['commedia', 'teatro']),
+  new Movie ('Una semana como Dios', 'cover.jpg', 7, ['commedia', 'musical']),
+  new Movie ('Like a Boss', 'love.webp', 10, ['commedia', 'sonetto']),
+  new Movie ('Funken Odin', 'world.webp', 5, ['commedia', 'thriller'])
   ]
 ?>
 
