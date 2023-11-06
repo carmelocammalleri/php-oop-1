@@ -5,7 +5,7 @@ class Movie {
   public $vote;
   public $genre;
 
-  public function __construct (string $_title, string $_image, float $_vote, array $_genre){
+  public function __construct (string $_title, Media $_image, float $_vote, array $_genre){
     $this->title = $_title;
     $this->image = $_image;
     $this->vote = $_vote;
@@ -25,10 +25,10 @@ class Media {
 }
 
 $movies=[
-  new Movie ('Una settimana da Dio', new Media('acqua.jpg', 'Una settimana da Dio'), 8, ['commedia', 'teatro']),
-  new Movie ('Una semana como Dios', new Media('cover.jpg', 'Una settimana da Dio'), 7, ['commedia', 'musical']),
-  new Movie ('Like a Boss', new Media('love.webp', 'Una settimana da Dio'), 10, ['commedia', 'sonetto']),
-  new Movie ('Funken Odin', new Media('world.webp', 'Una settimana da Dio'), 5, ['commedia', 'thriller'])
+  new Movie ('Una settimana da Dio', new Media ('acqua.jpg', 'Una settimana da Dio'), 8, ['commedia', 'teatro']),
+  new Movie ('Una semana como Dios', new Media ('cover.jpg', 'Una settimana da Dio'), 7, ['commedia', 'musical']),
+  new Movie ('Like a Boss', new Media ('love.webp', 'Una settimana da Dio'), 10, ['commedia', 'sonetto']),
+  new Movie ('Funken Odin', new Media ('world.webp', 'Una settimana da Dio'), 5, ['commedia', 'thriller'])
   ]
 ?>
 
@@ -44,7 +44,7 @@ $movies=[
 <?php foreach($movies as $movie): ?>
   <ul>
     <li><?php echo $movie->title ?></li>
-    <li><img src="/img/<?php echo $movie->image->image_name ?>" alt=""></li>
+    <li><img src="./img/<?php echo $movie->image->image_name ?>" alt="<?php echo $movie->image->title_image ?>"></li>
     <li><?php echo $movie->vote ?></li>
     <li><?php echo implode("/", $movie->genre) ?></li>
   </ul>
