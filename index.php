@@ -45,16 +45,25 @@ $movies=[
   <title>Document</title>
 </head>
 <body>
-  
-<?php foreach($movies as $movie): ?>
-  <div class="card" style="width: 18rem;">
-  <img src="./img/<?php echo $movie->image->image_name ?>" alt="<?php echo $movie->image->title_image ?>">
-  <div class="card-body">
-    <h5 class="card-title"><?php echo $movie->title ?></h5>
-    <p class="card-text"><?php echo $movie->vote ?></p>
-    <p class="card-text"><?php echo implode("/", $movie->genre) ?></p>
+
+  <div class="container">
+    <h1>film list</h1>
+
+    <!-- list film -->
+    <div class="d-flex">
+      <?php foreach($movies as $movie): ?>
+          <div class="card" style="width: 18rem;">
+            <img src="./img/<?php echo $movie->image->image_name ?>" alt="<?php echo $movie->image->title_image ?>">
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $movie->title ?></h5>
+              <p class="card-text"><?php echo $movie->vote ?></p>
+              <p class="card-text"><?php echo implode("/", $movie->genre) ?></p>
+            </div>
+          </div>
+      <?php endforeach; ?>
+    </div>    
+
   </div>
-</div>
-  <?php endforeach; ?>
+  
 </body>
 </html>
