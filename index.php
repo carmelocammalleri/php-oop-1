@@ -1,5 +1,5 @@
 <?php
-class Movies {
+class Movie {
   public $title;
   public $image;
   public $vote;
@@ -11,11 +11,14 @@ class Movies {
     $this->vote = $_vote;
     $this->genre = $_genre;
   }
-
-  var_dump(Movies);
 }
 
-
+$movies=[
+  new Movie ('Una settimana da Dio', 'pappagallo.jpg', 8, ['commedia']),
+  new Movie ('Una semana como Dios', 'pappagallo.jpg', 8, ['commedia']),
+  new Movie ('Like Boss', 'pappagallo.jpg', 8, ['commedia']),
+  new Movie ('Funken Odin', 'pappagallo.jpg', 8, ['commedia'])
+  ]
 ?>
 
 <!DOCTYPE html>
@@ -27,5 +30,13 @@ class Movies {
 </head>
 <body>
   
+<?php foreach($movies as $movie): ?>
+  <ul>
+    <li><?php echo $movie->title ?></li>
+    <li><?php echo $movie->image ?></li>
+    <li><?php echo $movie->vote ?></li>
+    <li><?php echo implode("/", $movie->genre) ?></li>
+  </ul>
+  <?php endforeach; ?>
 </body>
 </html>
