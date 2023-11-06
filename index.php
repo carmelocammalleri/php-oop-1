@@ -13,6 +13,13 @@ class Movie {
   }
 }
 
+class Media {
+
+  public image_name;
+  public title_image;
+
+}
+
 $movies=[
   new Movie ('Una settimana da Dio', 'acqua.jpg', 8, ['commedia', 'teatro']),
   new Movie ('Una semana como Dios', 'cover.jpg', 7, ['commedia', 'musical']),
