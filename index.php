@@ -17,6 +17,9 @@ require_once __DIR__ . "/db/db.php";
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+  <!-- style css -->
+  <link rel="stylesheet" href="./css/style.css">
+
   <title>Document</title>
 </head>
 <body>
@@ -25,14 +28,20 @@ require_once __DIR__ . "/db/db.php";
     <h1>film list</h1>
 
     <!-- list film e serietv -->
-    <div class="d-flex">
+    <div class="d-flex flex-wrap justify-content-between">
       <?php foreach($films as $film): ?>
-          <div class="card" style="width: 18rem;">
+          <div class="card col-3 my-3" style="width: 18rem;">
+
+          <!-- immagine -->
+         
             <img src="./img/<?php echo $film->image->image_name ?>" alt="<?php echo $film->image->title_image ?>">
+    
+
             <div class="card-body">
-              <h5 class="card-title"><?php echo $film->title ?></h5>
-              <p class="card-text"><?php echo $film->vote ?></p>
-              <p class="card-text"><?php echo implode("/", $film->genre) ?></p>
+              <h4 class="card-title"><?php echo $film->title ?></h4>
+              
+              <p class="card-text">Voto: <?php echo $film->vote ?></p>
+              <p class="card-text">Genere: <?php echo implode("/", $film->genre) ?></p>
 
             <!-- condizione per la stampa di elementi diversi -->
               <?php  if(isset ($film->duration_film)): ?>
