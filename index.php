@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . "/Model/Media.php";
-require_once __DIR__ . "/Model/Movie.php";
+require_once __DIR__ . "/Model/Film.php";
 require_once __DIR__ . "/db/db.php";
 
 ?>
@@ -24,13 +24,13 @@ require_once __DIR__ . "/db/db.php";
 
     <!-- list film -->
     <div class="d-flex">
-      <?php foreach($movies as $movie): ?>
+      <?php foreach($films as $film): ?>
           <div class="card" style="width: 18rem;">
-            <img src="./img/<?php echo $movie->image->image_name ?>" alt="<?php echo $movie->image->title_image ?>">
+            <img src="./img/<?php echo $film->image->image_name ?>" alt="<?php echo $film->image->title_image ?>">
             <div class="card-body">
-              <h5 class="card-title"><?php echo $movie->title ?></h5>
-              <p class="card-text"><?php echo $movie->vote ?></p>
-              <p class="card-text"><?php echo implode("/", $movie->genre) ?></p>
+              <h5 class="card-title"><?php echo $film->title ?></h5>
+              <p class="card-text"><?php echo $film->vote ?></p>
+              <p class="card-text"><?php echo implode("/", $film->genre) ?></p>
             </div>
           </div>
       <?php endforeach; ?>
