@@ -5,7 +5,7 @@ $films=[
   new Film ('La madre', new Media ('acqua.jpg', 'La madre'), 3, ['thriller', 'sentimentale'], 110, 2000),
   new Film ('Doraemon', new Media ('doraemon.jpg', 'Doraemon'), 5, ['fantasia', 'bimbi'], 110, 2000),
   
-  new Tvserie ('Doraemon', new Media ('doraemon.jpg', 'Doraemon'), 5, ['fantasia', 'bimbi'], 11, 2000),
-  new Tvserie ('Dragonball', new Media ('doraemon.jpg', 'Doraemon'), 5, ['fantasia', 'bimbi'], 11, 2000),
-  new Tvserie ('Ncis', new Media ('doraemon.jpg', 'Doraemon'), 5, ['fantasia', 'bimbi'], 11, 2000)
+  new Tvserie ('Braking Bad', new Media ('brba.jpg', 'Braking Bad'), 5, ['fantasia', 'bimbi'], 11, 2000),
+  new Tvserie ('Dragonball', new Media ('dragonball.webp', 'Dragonball'), 5, ['fantasia', 'bimbi'], 11, 2000),
+  new Tvserie ('Ncis', new Media ('ncis.webp', 'Ncis'), 5, ['fantasia', 'bimbi'], 11, 2000)
 ];
