@@ -25,7 +25,7 @@ require_once __DIR__ . "/db/db.php";
 <body>
 
   <div class="container">
-    <h1>film list</h1>
+    <h1 class="text-uppercase">film list</h1>
 
     <!-- list film e serietv -->
     <div class="d-flex flex-wrap justify-content-between">
@@ -40,25 +40,28 @@ require_once __DIR__ . "/db/db.php";
             <div class="card-body">
               <h4 class="card-title"><?php echo $film->title ?></h4>
               
-              <p class="card-text">Voto: <?php echo $film->vote ?></p>
-              <p class="card-text">Genere: <?php echo implode("/", $film->genre) ?></p>
+              <p class="card-text publicationYear">
+                Anno: <?php echo $film->production_year ?>
+              </p>
+
 
             <!-- condizione per la stampa di elementi diversi -->
               <?php  if(isset ($film->duration_film)): ?>
-              <p class="card-text">
+              <p class="card-text duration">
                 Durata: <?php  echo $film->duration_film ?> min
               </p>
 
               <?php else: ?>
-              <p class="card-text">
+              <p class="card-text duration">
                 Stagioni:<?php  echo $film->season ?>
               </p>
                 <?php endif; ?>
             <!-- /condizione per la stampa di elementi diversi -->
 
-              <p class="card-text">
-                Anno: <?php echo $film->production_year ?>
-              </p>
+              <p class="card-text">Voto: <?php echo $film->vote ?></p>
+              <p class="card-text genreFilm">Genere: <?php echo implode("/", $film->genre) ?></p>
+
+
             </div>
           </div>
       <?php endforeach; ?>
