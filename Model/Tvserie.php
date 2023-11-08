@@ -1,15 +1,14 @@
 <?php
 
-class Tvserie {
-  public $title;
-  public $image;
-  public $vote;
-  public $genre;
+class Tvserie extends Movie{
+  public $duration_tvserie;
+  public $production_year;
+  
+  public function __construct (string $_title, Media $_image, float $_vote, array $_genre, int $_duration_tvserie, int $_production_year){
 
-  public function __construct (string $_title, Media $_image, float $_vote, array $_genre){
-    $this->title = $_title;
-    $this->image = $_image;
-    $this->vote = $_vote;
-    $this->genre = $_genre;
+    $this->production_year = $_production_year;
+    $this->duration_tvserie = $_duration_tvserie;
+
+    parent::__construct (string $_title, Media $_image, float $_vote, array $_genre);
   }
 }
