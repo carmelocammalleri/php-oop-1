@@ -12,7 +12,7 @@ class Production {
   public function __construct (string $_title, Media $_image, float $_vote, array $_genre, int $_published_year){
 
     if(strlen($_title)===0){
-      throw new Exception ("Unni va cu lu sceccu! manca almeno il titolo del film");
+      throw new Exception ("Unni va cu lu sceccu! Manca almeno il titolo del film");
     }else{
       $this->title = $_title;
     }

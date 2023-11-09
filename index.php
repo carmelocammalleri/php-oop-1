@@ -34,7 +34,7 @@ try {
     <h1 class="text-uppercase">film list</h1>
 
     <?php  if(isset ($error)): ?>
-      <div class="alert alert-primary" role="alert">
+      <div class="alert alert-primary my-3 " role="alert">
         <?php echo $error ?>
       </div>
 
