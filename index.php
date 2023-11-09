@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/Traits/PublishedYear.php";
 require_once __DIR__ . "/Model/Production.php";
 require_once __DIR__ . "/Model/Media.php";
 require_once __DIR__ . "/Model/Film.php";
@@ -41,7 +42,7 @@ require_once __DIR__ . "/db/db.php";
               <h4 class="card-title"><?php echo $film->title ?></h4>
               
               <p class="card-text publicationYear">
-                Anno: <?php echo $film->production_year ?>
+                Anno: <?php echo $film->published_year ?>
               </p>
 
 
